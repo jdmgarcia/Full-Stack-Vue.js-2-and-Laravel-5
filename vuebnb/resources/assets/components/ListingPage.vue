@@ -34,8 +34,8 @@
 <script>
 import { populateAmenitiesAndPrices } from '../js/helpers';
 
-let model = JSON.parse(window.vuebnb_listing_model);
-model = populateAmenitiesAndPrices(model);
+let serverData = JSON.parse(window.vuebnb_server_data);
+let model = populateAmenitiesAndPrices(serverData.listing);
 
 import ImageCarousel from './ImageCarousel.vue';
 import ModalWindow from './ModalWindow.vue';
@@ -45,12 +45,7 @@ import ExpandableText from './ExpandableText.vue';
 
 export default {
   data() {
-    return Object.assign(model, { message: 'Hello world'});
-  },
-  watch: {
-    message: function(newVal, oldVal) {
-      console.log(oldVal, ', ', newVal);
-    }
+    return Object.assign(model, {});
   },
   components: {
     ImageCarousel,
@@ -66,11 +61,6 @@ export default {
   }
 
 }
-
-setTimeout(function() {
-  app.message = 'Goodbye world';
-  // Output: "Hello world, Goodbye world";
-}, 2000);
 </script>
 
 <style lang="css">
