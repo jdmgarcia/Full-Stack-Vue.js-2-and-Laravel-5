@@ -46,4 +46,4 @@ Go to [http://localhost:3000/](http://localhost:3000/)
 
 Go to [http://localhost:3000/listing/1](http://localhost:3000/listing/1)
 
--> page 216 - chapter 7
+-> page 230 - chapter 7

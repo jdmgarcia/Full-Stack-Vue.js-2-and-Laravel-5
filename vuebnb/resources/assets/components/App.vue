@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div id="toolbar">
+    <header id="toolbar">
       <router-link :to="{ name: 'home' }">
         <img class="icon" src="/images/logo.png">
         <h1>vuebnb</h1>
       </router-link>
-    </div>
+    </header>
     <router-view></router-view>
   </div>
 </template>
